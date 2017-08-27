@@ -4,9 +4,9 @@
 
 Dockerfiles for building Centos based Kibana images.
 
-### Supported tags and respective Dockerfile links
+## Supported tags and respective Dockerfile links
 
-#### phenompeople/nginx
+### phenompeople/nginx
 
 [![Docker Automated build](https://img.shields.io/docker/automated/phenompeople/nginx.svg?style=plastic)](https://hub.docker.com/r/phenompeople/nginx/)
 [![Docker Build Status](https://img.shields.io/docker/build/phenompeople/nginx.svg?style=plastic)](https://hub.docker.com/r/phenompeople/nginx/)
@@ -19,11 +19,10 @@ Dockerfiles for building Centos based Kibana images.
 * **`1.11.10`	([1.11.10/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.11.10/Dockerfile))**
 * **`angular` 	([1.11.10/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.11.10/Dockerfile))**
 
-#### phenompeople/nginx-lua (Depricated)
+### phenompeople/nginx-lua (Deprecated)
 
 [![Docker Automated build](https://img.shields.io/docker/automated/phenompeople/nginx-lua.svg?style=plastic)](https://hub.docker.com/r/phenompeople/nginx-lua/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/phenompeople/nginx-lua.svg?style=plastic)](https://hub.docker.com/r/phenompeople/nginx-lua/)
-
 
 * **`1.11.10`**
 * **`latest`**
