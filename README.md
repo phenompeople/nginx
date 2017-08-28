@@ -21,6 +21,8 @@ Dockerfiles for building Centos based Kibana images.
 
 ### phenompeople/nginx-lua (Deprecated)
 
+This image has been deprecated in favor of the automated nginx image provided. The upstream images are available to pull via docker.elastic.co/phenompeople/nginx:[version] like 1.13.4. The images found here will receive no further updates. Please adjust your usage accordingly.
+
 [![Docker Automated build](https://img.shields.io/docker/automated/phenompeople/nginx-lua.svg?style=plastic)](https://hub.docker.com/r/phenompeople/nginx-lua/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/phenompeople/nginx-lua.svg?style=plastic)](https://hub.docker.com/r/phenompeople/nginx-lua/)
 
