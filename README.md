@@ -2,7 +2,7 @@
 
 ## Nginx 
 
-Dockerfiles for building Centos based Kibana images.
+Dockerfiles for building Centos based Nginx LuaJIT image.
 
 ## Supported tags and respective Dockerfile links
 
