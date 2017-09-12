@@ -92,8 +92,8 @@ cd $NGINX_SETUP_DIR/nginx-$NGINX_VERSION
   --with-mail_ssl_module \
   --with-threads \
   --with-ld-opt="-Wl,-rpath,/usr/local/lib" \
-  --add-dynamic-module=$NGINX_SETUP_DIR/ngx_devel_kit-${NGINX_DEV_KIT_VERSION#v} \
-  --add-dynamic-module=$NGINX_SETUP_DIR/lua-nginx-module-${NGINX_LUA_MOD_VERSION#v} \
+  --add-module=$NGINX_SETUP_DIR/ngx_devel_kit-${NGINX_DEV_KIT_VERSION#v} \
+  --add-module=$NGINX_SETUP_DIR/lua-nginx-module-${NGINX_LUA_MOD_VERSION#v} \
   --add-module=$NGINX_SETUP_DIR/nginx_ajp_module-${NGINX_AJP_VERSION} \
   --with-pcre=../pcre-$PCRE_VERSION \
   --with-zlib=../zlib-$ZLIB_VERSION \
