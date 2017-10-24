@@ -32,8 +32,7 @@ ENV PCRE_VERSION=${PCRE_VERSION} \
 ADD setup /opt/phenom/scripts
 RUN /opt/phenom/scripts/install.sh
 COPY config/nginx.conf /etc/nginx/nginx.conf
-
-#VOLUME /usr/share/nginx/html \
+ADD index.html /usr/local/nginx/html/index.html
 VOLUME  /etc/nginx/conf.d
 RUN yum remove -q -e 0 -y wget make perl gcc-c++ pcre-devel zlib-devel file && \
     yum clean all
