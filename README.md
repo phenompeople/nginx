@@ -12,12 +12,14 @@ Dockerfiles for building Centos based Nginx LuaJIT image.
 [![Docker Build Status](https://img.shields.io/docker/build/phenompeople/nginx.svg?style=plastic)](https://hub.docker.com/r/phenompeople/nginx/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/phenompeople/nginx.svg?style=plastic)](https://hub.docker.com/r/phenompeople/nginx/)
 
-* **`1.13.4` 	([1.13.4/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.13.4/Dockerfile))**
-* **`latest`		([1.13.4/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.13.4/Dockerfile))**
+
+* **`latest`		([1.13.9/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.13.9/Dockerfile))**
+* **`1.13.9`		([1.13.9/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.13.9/Dockerfile))**
+* **`1.13.4`		([1.13.4/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.13.4/Dockerfile))**
 * **`1.12.1`		([1.12.1/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.12.1/Dockerfile))**
-* **`stable` 	([1.12.1/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.12.1/Dockerfile))**
+* **`stable`		([1.12.1/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.12.1/Dockerfile))**
 * **`1.11.10`	([1.11.10/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.11.10/Dockerfile))**
-* **`angular` 	([1.11.10/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.11.10/Dockerfile))**
+* **`angular`	([1.11.10/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.11.10/Dockerfile))**
 
 ### phenompeople/nginx-lua (Deprecated)
 
@@ -38,31 +40,34 @@ This image has been deprecated in favor of the automated nginx image provided. T
 1. **ZLIB** 			- zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system
 1. **OPENSSL**		- OpenSSL is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.
 1. **DEV KIT**		- Nginx Development Kit - an Nginx module that adds additional generic tools that module developers can use in their own modules
-1. **AJP**				- Nginx can connect to AJP port directly. The motivation of including these modules is Nginx's high performance and robustness. 	 
+1. **AJP**				- Nginx can connect to AJP port directly. The motivation of including these modules is Nginx's high performance and robustness.
+1. **STICKY**		- Nginx module to add a sticky cookie to be always forwarded to the same upstream server.
 1. **LUA**				- Embed the Power of Lua into NGINX HTTP servers
 
 ### Component and its version included
 
 ```
-|---------------------------------|------------|-------------|--------------|-------------|--------------|-------------|
-| Component Name                  |  1.13.4    |    latest   |   1.12.1     |   stable    |   1.11.10    |  angular    | 
-|---------------------------------|------------|-------------|--------------|-------------|--------------|-------------|
-| Nginx - Core                    |  1.13.4    |   1.13.4    |   1.12.1     |  1.12.1     |    1.11.10   |  1.11.10    |    
-|---------------------------------|------------|-------------|--------------|-------------|--------------|------------ |
-| Open SSL                        |  1.0.2l    |   1.0.2l    |    1.0.2l    |  1.0.2l     |    1.0.2k    |  1.0.2k     |    
-|---------------------------------|------------|-------------|--------------|-------------|--------------|-------------|
-| PCRE                            |   8.40     |    8.40     |    8.40      |   8.40      |    8.40      |   8.40      |    
-|---------------------------------|------------|-------------|--------------|-------------|--------------|-------------|
-| ZLIB                            |  1.2.11    |   1.2.11    |    1.2.11    |  1.2.11     |    1.2.11    |  1.2.11     |    
-|---------------------------------|------------|-------------|--------------|-------------|--------------|-------------|
-| LUAJIT                          |  2.0.5     |   2.0.5     |    2.0.5     |  2.0.5      |   2.0.4      |  2.0.4      |    
-|---------------------------------|------------|-------------|--------------|-------------|--------------|-------------|
-| Nginx Dev Kit                   |  v0.3.0    |   v0.3.0    |   v0.3.0     | v0.3.0      |   v0.3.0     | v0.3.0      |    
-|---------------------------------|------------|-------------|--------------|-------------|--------------|-------------|
-| Nginx Lua Mod Version           |  v0.10.10  |   v0.10.10  |   v0.10.10   | v0.10.10    |   v0.10.7    | v0.10.7     |    
-|---------------------------------|------------|-------------|--------------|-------------|--------------|-------------|
-| Nginx AJP Module                |  master    |  master     |    master    | master      |    master    | master      |    
-|---------------------------------|------------|-------------|--------------|-------------|--------------|-------------|
+|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
+| **Component Name**              |**latest**  |**1.13.9**  |  **1.13.4** | **1.12.1**   | **stable**  | **1.11.10**  |**angular**  |
+|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
+| Nginx - Core                    |  1.13.4    |  1.13.9    |   1.13.4    |   1.12.1     |  1.12.1     |    1.11.10   |  1.11.10    |
+|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|------------ |
+| Open SSL                        |  1.0.2n    |   1.0.2n   |    1.0.2l   |   1.0.2l     |    1.0.2k   |   1.0.2k     |             |
+|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
+| PCRE                            |   8.41     |    8.41    |    8.40     |    8.40      |    8.40     |   8.40       |             |
+|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
+| ZLIB                            |  1.2.11    |   1.2.11   |    1.2.11   |  1.2.11      |    1.2.11   |  1.2.11      |             |
+|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
+| LUAJIT                          |  2.0.5     |   2.0.5    |    2.0.5    |  2.0.5       |   2.0.4     |  2.0.4       |             |
+|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
+| Nginx Dev Kit                   |  v0.3.0    |   v0.3.0   |   v0.3.0    | v0.3.0       |   v0.3.0    | v0.3.0       |             |
+|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
+| Nginx Lua Mod Version           |  v0.10.11  |   v0.10.11 |   v0.10.10  |  v0.10.10    |   v0.10.7   | v0.10.7      |             |
+|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
+| Nginx Sticky Module             |  master    |  master    |    N/A      |    N/A       |      N/A    |     N/A      |             |
+|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
+| Nginx AJP Module                |  master    |  master    |    master   | master       |    master   | master       |             |
+|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
 ```
 
 #### Pre-Requisites
@@ -73,7 +78,7 @@ This image has been deprecated in favor of the automated nginx image provided. T
 
 1.  This image can be used by simply running 
 
-```$ docker run --name=nginx -v /etc/nginx/conf.d:/etc/nginx/conf.d -v /usr/share/nginx/html-p 80:80 -td phenompeople/nginx:latest```
+```$ docker run --name=nginx -v /etc/nginx/conf.d:/etc/nginx/conf.d -v /usr/share/nginx/html:/usr/share/nginx/html -p 80:80 -td phenompeople/nginx:latest```
 
 Above command runs nginx container with port 80 mapped to host and connecting to static site and its respective configuration mapped 
 
@@ -89,7 +94,7 @@ Above command runs nginx container with port 80 mapped to host and connecting to
 
 1. To make image run even after reboot use extra option --restart=always
 
-```$ docker run --restart=always  --name=nginx -v /etc/nginx/conf.d:/etc/nginx/conf.d -v /usr/share/nginx/html-p 80:80 -td phenompeople/nginx:latest```
+```$ docker run --restart=always  --name=nginx -v /etc/nginx/conf.d:/etc/nginx/conf.d -v /usr/share/nginx/html:/usr/share/nginx/html -p 80:80 -td phenompeople/nginx:latest```
 
 1. Please define below variables during run time to replace default values, angular JS based container will require DIRECTORY_ROOT to map application 
 
