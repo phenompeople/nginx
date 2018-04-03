@@ -5,6 +5,8 @@ RUN yum install -q -e 0 -y wget make perl gcc-c++ pcre-devel zlib-devel file && 
     useradd -d  /opt/phenom phenom && \
     mkdir -p /opt/phenom/scripts
 
+ENV LANG en_US.UTF-8
+
 ARG NGINX_VERSION=1.13.9
 ARG OPENSSL_VERSION=1.0.2n
 ARG PCRE_VERSION=8.41
