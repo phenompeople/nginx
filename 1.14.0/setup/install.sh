@@ -9,15 +9,14 @@ NGINX_DEV_KIT_SRC_URI="https://github.com/simpl/ngx_devel_kit/archive/$NGINX_DEV
 NGINX_AUTH_KIT_SRC_URI="https://github.com/perusio/nginx-auth-request-module/archive/master.tar.gz"
 NGINX_LUA_MOD_SRC_URI="https://github.com/openresty/lua-nginx-module/archive/$NGINX_LUA_MOD_VERSION.tar.gz"
 NGINX_AJP_MOD_SRC_URI="https://github.com/yaoweibin/nginx_ajp_module/archive/$NGINX_AJP_VERSION.tar.gz"
+NGINX_STICKY_MOD_SRC_URI="https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng/get/master.tar.gz"
 SOURCE_DIR="$NGINX_SETUP_DIR/sources"
-
 func_create_directory() {
   if [ ! -e $1 ]; then
     echo "Creating Directory : $1"
     mkdir -p $1
   fi
 }
-
 download_and_extract(){
   SRC_LOCATION=$1
   func_create_directory $SOURCE_DIR
@@ -44,6 +43,7 @@ download_and_extract $OPENSSL_SRC_URI
 download_and_extract $NGINX_DEV_KIT_SRC_URI
 download_and_extract $NGINX_LUA_MOD_SRC_URI
 download_and_extract $NGINX_AJP_MOD_SRC_URI
+download_and_extract $NGINX_STICKY_MOD_SRC_URI
 
 cd $NGINX_SETUP_DIR/openssl-$OPENSSL_VERSION
 ./Configure darwin64-x86_64-cc --prefix=/usr > /tmp/log_file 2>&1
@@ -76,8 +76,6 @@ cd $NGINX_SETUP_DIR/nginx-$NGINX_VERSION
   --http-uwsgi-temp-path=${NGINX_TEMP_DIR}/uwsgi \
   --with-pcre-jit \
   --with-http_ssl_module \
-  --with-ipv6 \
-  --with-http_ssl_module \
   --with-http_stub_status_module \
   --with-http_realip_module \
   --with-http_auth_request_module \
@@ -96,10 +94,11 @@ cd $NGINX_SETUP_DIR/nginx-$NGINX_VERSION
   --add-module=$NGINX_SETUP_DIR/ngx_devel_kit-${NGINX_DEV_KIT_VERSION#v} \
   --add-module=$NGINX_SETUP_DIR/lua-nginx-module-${NGINX_LUA_MOD_VERSION#v} \
   --add-module=$NGINX_SETUP_DIR/nginx_ajp_module-${NGINX_AJP_VERSION} \
+  --add-module=$NGINX_SETUP_DIR/nginx-goodies-nginx-sticky-module-ng-08a395c66e42 \
   --with-pcre=../pcre-$PCRE_VERSION \
   --with-zlib=../zlib-$ZLIB_VERSION \
   --with-openssl=../openssl-$OPENSSL_VERSION
 
 make  && make install
 chown -R root:root $NGINX_SETUP_DIR
-rm -rf $NGINX_SETUP_DIR/sources /tmp/log_file
+rm -rf $NGINX_SETUP_DIR/sources /tmp/log_file 

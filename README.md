@@ -13,12 +13,9 @@ Dockerfiles for building Centos based Nginx LuaJIT image.
 [![Docker Pulls](https://img.shields.io/docker/pulls/phenompeople/nginx.svg?style=plastic)](https://hub.docker.com/r/phenompeople/nginx/)
 
 
-* **`latest`		([1.13.9/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.13.9/Dockerfile))**
-* **`1.13.9`		([1.13.9/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.13.9/Dockerfile))**
+* **`latest`		([1.14.0/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.14.0/Dockerfile))**
+* **`1.14.0`		([1.14.0/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.14.0/Dockerfile))**
 * **`1.13.4`		([1.13.4/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.13.4/Dockerfile))**
-* **`1.12.1`		([1.12.1/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.12.1/Dockerfile))**
-* **`stable`		([1.12.1/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.12.1/Dockerfile))**
-* **`1.11.10`	([1.11.10/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.11.10/Dockerfile))**
 * **`angular`	([1.11.10/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.11.10/Dockerfile))**
 
 ### phenompeople/nginx-lua (Deprecated)
@@ -41,33 +38,33 @@ This image has been deprecated in favor of the automated nginx image provided. T
 1. **OPENSSL**		- OpenSSL is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.
 1. **DEV KIT**		- Nginx Development Kit - an Nginx module that adds additional generic tools that module developers can use in their own modules
 1. **AJP**				- Nginx can connect to AJP port directly. The motivation of including these modules is Nginx's high performance and robustness.
-1. **STICKY**		- Nginx module to add a sticky cookie to be always forwarded to the same upstream server.
+1. **STICKY**		  - Nginx module to add a sticky cookie to be always forwarded to the same upstream server.
 1. **LUA**				- Embed the Power of Lua into NGINX HTTP servers
 
 ### Component and its version included
 
 ```
-|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
-| **Component Name**              |**latest**  |**1.13.9**  |  **1.13.4** | **1.12.1**   | **stable**  | **1.11.10**  |**angular**  |
-|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
-| Nginx - Core                    |  1.13.4    |  1.13.9    |   1.13.4    |   1.12.1     |  1.12.1     |    1.11.10   |  1.11.10    |
-|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|------------ |
-| Open SSL                        |  1.0.2n    |   1.0.2n   |    1.0.2l   |   1.0.2l     |    1.0.2k   |   1.0.2k     |             |
-|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
-| PCRE                            |   8.41     |    8.41    |    8.40     |    8.40      |    8.40     |   8.40       |             |
-|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
-| ZLIB                            |  1.2.11    |   1.2.11   |    1.2.11   |  1.2.11      |    1.2.11   |  1.2.11      |             |
-|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
-| LUAJIT                          |  2.0.5     |   2.0.5    |    2.0.5    |  2.0.5       |   2.0.4     |  2.0.4       |             |
-|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
-| Nginx Dev Kit                   |  v0.3.0    |   v0.3.0   |   v0.3.0    | v0.3.0       |   v0.3.0    | v0.3.0       |             |
-|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
-| Nginx Lua Mod Version           |  v0.10.11  |   v0.10.11 |   v0.10.10  |  v0.10.10    |   v0.10.7   | v0.10.7      |             |
-|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
-| Nginx Sticky Module             |  master    |  master    |    N/A      |    N/A       |      N/A    |     N/A      |             |
-|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
-| Nginx AJP Module                |  master    |  master    |    master   | master       |    master   | master       |             |
-|---------------------------------|------------|------------|-------------|--------------|-------------|--------------|-------------|
+|---------------------------------|------------|------------|-------------|
+| **Component Name**              |**latest**  |**1.14.0**  |  **1.13.9** |
+|---------------------------------|------------|------------|-------------|
+| Nginx - Core                    |  1.14.0    |  1.14.0    |   1.13.9    |
+|---------------------------------|------------|------------|-------------|
+| Open SSL                        |  1.1.1     |   1.1.1    |    1.0.2n   |
+|---------------------------------|------------|------------|-------------|
+| PCRE                            |   8.42     |    8.42    |    8.41     |
+|---------------------------------|------------|------------|-------------|
+| ZLIB                            |  1.2.11    |   1.2.11   |    1.2.11   |
+|---------------------------------|------------|------------|-------------|
+| LUAJIT                          |  2.0.5     |   2.0.5    |    2.0.5    |
+|---------------------------------|------------|------------|-------------|
+| Nginx Dev Kit                   |  v0.3.0    |   v0.3.0   |   v0.3.0    |
+|---------------------------------|------------|------------|-------------|
+| Nginx Lua Mod Version           |  v0.10.11  |   v0.10.11 |   v0.10.10  |
+|---------------------------------|------------|------------|-------------|
+| Nginx Sticky Module             |  master    |  master    |    N/A      |
+|---------------------------------|------------|------------|-------------|
+| Nginx AJP Module                |  master    |  master    |    master   |
+|---------------------------------|------------|------------|-------------|
 ```
 
 #### Pre-Requisites
