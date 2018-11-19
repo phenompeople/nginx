@@ -1,7 +1,7 @@
-FROM centos:7.5.1804
+FROM amazonlinux:2
 LABEL maintainer="rajesh.jonnalagadda@phenompeople.com" \
       version="1.13.9"
-RUN yum install -q -e 0 -y wget make perl gcc-c++ pcre-devel zlib-devel file && \
+RUN yum install -q -e 0 -y wget make perl gcc-c++ pcre-devel zlib-devel file shadow-utils tar gzip&& \
     useradd -d  /opt/phenom phenom && \
     mkdir -p /opt/phenom/scripts
 
