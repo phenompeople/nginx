@@ -2,7 +2,7 @@ FROM amazonlinux:2
 LABEL maintainer="rajesh.jonnalagadda@phenompeople.com" \
       version="1.14.0"
 RUN yum install -q -e 0 -y wget make perl gcc-c++ pcre-devel zlib-devel file shadow-utils tar gzip&& \
-    useradd -d  /opt/phenom phenom && \
+    useradd -d  /opt/phenom phenom -u 1004 && \
     mkdir -p /opt/phenom/scripts
 
 ENV LANG en_US.UTF-8
