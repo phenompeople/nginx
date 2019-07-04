@@ -3,7 +3,7 @@
 
 ## Nginx 
 
-Dockerfiles for building Centos based Nginx LuaJIT image.
+Dockerfiles for building Centos/Amazon Linux based Nginx LuaJIT image.
 
 ## Supported tags and respective Dockerfile links
 
@@ -14,10 +14,10 @@ Dockerfiles for building Centos based Nginx LuaJIT image.
 [![Docker Pulls](https://img.shields.io/docker/pulls/phenompeople/nginx.svg?style=plastic)](https://hub.docker.com/r/phenompeople/nginx/)
 
 
-* **`latest`		([1.14.0/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.14.0/Dockerfile))**
-* **`1.14.0`		([1.14.0/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.14.0/Dockerfile))**
-* **`1.13.4`		([1.13.4/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.13.4/Dockerfile))**
-* **`angular`	([1.11.10/Dockerfile](https://bitbucket.org/phenompeople/nginx/src/master/1.11.10/Dockerfile))**
+* **`latest`		([1.14.0/Dockerfile](https://github.com/phenompeople/nginx/blob/master/1.14.0/Dockerfile))**
+* **`1.14.0`		([1.14.0/Dockerfile](https://github.com/phenompeople/nginx/blob/master/1.14.0/Dockerfile))**
+* **`1.13.4`		([1.13.4/Dockerfile](https://github.com/phenompeople/nginx/blob/master/1.13.4/Dockerfile))**
+* **`angular`	([1.11.10/Dockerfile](https://github.com/phenompeople/nginx/blob/master/1.11.10/Dockerfile))**
 
 ### phenompeople/nginx-lua (Deprecated)
 
